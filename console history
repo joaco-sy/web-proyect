@@ -1,0 +1,35 @@
+1  clear
+    2  apt-get -y  update && apt-get -y install tmux && apt-get -y install nginx
+    3  clear
+    4  cd /etc/nginx/
+    5  ls -lh
+    6  cd cd sites-available/
+    7  cd sites-available/
+    8  clear
+    9  cp default joaco.sydo.com
+   10  vim joaco.sydo.com 
+   11  cp default marce.sydo.com
+   12  vim joaco.sydo.com 
+   13  vim marce.sydo.com 
+   14  cd ../sites-enabled/
+   15  ln -s ../sites-available/joaco.sydo.com .
+   16  ln -s ../sites-available/marce.sydo.com .
+   17  cd ../sites-available/ 
+   18  vim joaco.sydo.com 
+   19  vim marce.sydo.com 
+   20  nginx -s reload
+   21  cd /var/www/
+   22  mkdir joaco
+   23  mkdir marce
+   24  cd joaco/
+   25  vim index.html
+   26  mkdir css
+   27  cd css/
+   28  vim style.css
+   29  cp style.css style2.css 
+   30  mv style2.css ../
+   31  cd ..
+   32  clear
+   33  ll
+   34  mv style2.css style.css 
+   35  history
